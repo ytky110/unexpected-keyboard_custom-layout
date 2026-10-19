@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file defines the QWERTY (US) layout.
+
+A layout is made of keys arranged into rows. Each keys can be assigned several
+symbols.
+'key0' assigns the symbol on the middle of the key. 'nw', 'ne', etc.. assign
+symbols to the corners of a key, they are arranged following the cardinal
+directions:
+
+   nw   n   ne
+   w    c    e
+   sw   s   se
+
+Symbols prefixed with 'loc ' are not visible on the keyboard. They are used to
+specify a place for a key, if it needed to be added to the layout later.
+(for example, by the "Add keys to keyboard" option)
+
+Keys can be made bigger with the 'width' attribute and blank space can be added
+on the left of a key with the 'shift' attribute.
+
+You can define your own bottom row by simply adding another '<row>...<row/>' tag
+then disabling the built-in bottom row by adding bottom_row="false"' to the
+keyboard metadata.
+
+Useful links.
+
+- Web based editor that will simplify editing of this file.
+  https://unexpected-keyboard-layout-editor.lixquid.com
+
+- Full guide on how to edit the layout.
+  https://github.com/Julow/Unexpected-Keyboard/tree/master/doc/Custom-layouts.md
+
+- Current definition of the bottom row (for easy importing).
+  https://github.com/Julow/Unexpected-Keyboard/tree/master/res/xml/bottom_row.xml
+
+- Built-in layouts (for easy importing)
+  https://github.com/Julow/Unexpected-Keyboard/tree/master/srcs/layouts
+
+-->
+<keyboard name="morse" script="latin">
+  <row>
+    <key c="・"/>
+    <key c="ー"/>
+</row>
+  <row>
+    <key c="."/>
+    <key c="-"/>
+  </row>
+  <row>
+  <key width="0.4" c="/"/>
+  <key width="0.4" c="／"/>
+  <key width="0.7" c="　"/>
+   <key width="0.5" c="backspace" ne="delete"/>
+</row>
+</keyboard>
